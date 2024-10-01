@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="payment-container">
+    <h2>Proceed to Payment</h2>
+  
+    <p class="payment-description">
+      Please enter the payment amount you would like to pay and proceed to select a payment method.
+    </p>
+  
+    <div class="form-group">
+      <label for="paymentAmount">Payment Amount:</label>
+      <input
+        type="number"
+        id="paymentAmount"
+        class="form-control"
+        placeholder="Enter amount"
+        [(ngModel)]="amount"
+      />
+    </div>
+  
+    <button class="btn btn-primary" (click)="proceedToPaymentMethod()">Proceed to Payment Method</button>
+  </div>
+  
+      
+</body>
+</html>

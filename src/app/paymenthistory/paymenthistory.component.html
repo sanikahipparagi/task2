@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="payment-history-container">
+    <h2>Payment History</h2>
+    
+    <p class="history-description">
+      Below is a record of your previous payments. You can view the payment details including date, amount, and status.
+    </p>
+    
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Meter Number</th> <!-- New Column -->
+            <th>Payment Mode</th> <!-- New Column -->
+            <th>Action</th> <!-- New Column for Download -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let payment of history">
+            <td>{{ payment.id }}</td>
+            <td>{{ payment.date }}</td>
+            <td>${{ payment.amount }}</td>
+            <td>
+              <span [ngClass]="payment.status.toLowerCase()">
+                {{ payment.status }}
+              </span>
+            </td>
+            <td>{{ payment.meterNumber }}</td> <!-- New Data -->
+            <td>{{ payment.paymentMode }}</td> <!-- New Data -->
+            <td>
+              <button >Download Invoice</button>
+              <!-- (click)="downloadInvoice(payment.id)" Download Button -->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+</body>
+</html>

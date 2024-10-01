@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(59, 130, 246, 0.5);
+    /* background-image: url("https://img.freepik.com/free-vector/realistic-technology-background_23-2149129123.jpg?w=996&t=st=1727680891~exp=1727681491~hmac=d9ece95ee3cf36cb0121e4ff99f34cc2c16408fc5c78508fdec8fd6e9b2bd629"); */
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 400px;
+    text-align: center;
+}
+.container img {
+    width: 200px;
+    margin-bottom: 20px;
+}
+.container h1 {
+    font-size: 24px;
+    color: #6a1b9a;
+    margin-bottom: 10px;
+}
+.container p {
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    /* display: block; */
+    justify-content: space-between;
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+.form-group input.full-width {
+    width: 100%;
+}
+.form-group label {
+    display:block;
+    /* align-items: center; */
+    margin-bottom: 8px;
+    color: #6c757d;
+}
+
+.btn-signup {
+    background-color: #6a1b9a;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+.btn-signup:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px; /* Add a small margin between the input and the error */
+    margin-bottom: 10px;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin: 5px;
+    box-sizing: border-box;
+    resize: none; /* Prevents resizing of the textarea */
+    min-height: 80px; /* Sets a minimum height for the textarea */
+}
+
+/* Adding focus style for better accessibility */
+.form-group textarea:focus {
+    border-color: #6a1b9a; /* Highlight the border when focused */
+    outline: none; /* Remove the default outline */
+    box-shadow: 0 0 5px rgba(106, 27, 154, 0.5); /* Subtle shadow effect */
+}
+
+/* Error styling for the textarea */
+.form-group textarea.error {
+    border-color: red;
+}
+  
+.footer {
+    margin-top: 20px;
+}
+.footer a {
+    color: #6a1b9a;
+    text-decoration: none;
+}

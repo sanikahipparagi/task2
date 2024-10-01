@@ -1,0 +1,48 @@
+/* src/app/components/bills/bills.component.css */
+.bill-list {
+    width: 80%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+  }
+  
+  .filter-section {
+    margin-bottom: 10px;
+  }
+  
+  .filter-section input {
+    padding: 5px;
+    margin-left: 5px;
+  }
+  
+  .pagination-controls {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  button {
+    padding: 8px 15px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  button[disabled] {
+    cursor: not-allowed;
+    background-color: #ccc;
+  }
+  

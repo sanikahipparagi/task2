@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="cash-payment-container">
+        <h2>Cash Payment</h2>
+        <p>Payment Slip ID: #{{ generateSlipId() }}</p>
+        <p>Amount: {{ getPaymentAmount() | currency }}</p>
+        <p>Please follow the instructions below to complete your payment:</p>
+        <div class="payment-slip">
+          <p>Make your payment at the nearest location and keep this slip as proof of payment.</p>
+        </div>
+        <button routerLink="/layout/paymentHistory">View Payment History</button>
+      </div>
+      
+</body>
+</html>

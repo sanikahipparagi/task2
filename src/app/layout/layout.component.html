@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class=" text-white p-3">
+        <div class="container d-flex justify-content-between align-items-center">
+          <div class="logo">
+            <img alt="Logo"  src="https://api.logo.com/api/v2/images?logo=logo_4f53d19a-e484-4248-ac72-4c021be9861c&format=webp&width=2000&background=transparent&fit=contain&quality=100&u=2024-09-30T07%3A02%3A03.077Z"/>
+          </div>
+          <nav>
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" routerLink="dashboard">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" routerLink="bills">Bills</a>
+              </li>
+              <li class="nav-item">
+<a class="nav-link text-white" routerLink="paymentMethod">Payments</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Profile</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    
+      <div class="main-content">
+        <router-outlet></router-outlet>
+       </div>
+       
+    
+      <!-- Footer Section (Optional) -->
+      <!-- <footer>
+        <p>&copy; 2024 Company Name. All Rights Reserved.</p>
+      </footer> -->
+</body>
+</html>

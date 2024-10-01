@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <img alt="BBC logo" height="120" 
+             src="https://api.logo.com/api/v2/images?logo=logo_4f53d19a-e484-4248-ac72-4c021be9861c&format=webp&width=2000&background=transparent&fit=contain&quality=100&u=2024-09-30T07%3A02%3A03.077Z" width="50"/>
+        <h1>Sign up</h1>
+        <p>Enter your credentials to continue</p>
+        
+        <form (ngSubmit)="onSubmit(signupForm)" #signupForm="ngForm" novalidate>
+            <div class="form-group">
+                <!-- First Name -->
+                <input id="firstName" placeholder="First Name" type="text" [(ngModel)]="firstName" 
+                       name="firstName" #firstNameField="ngModel" required/>
+                <div *ngIf="firstNameField.touched && firstNameField.invalid" class="error">
+                    First Name is required.
+                </div>
+
+                <!-- Last Name -->
+                <input id="lastName" placeholder="Last Name" type="text" [(ngModel)]="lastName" 
+                       name="lastName" #lastNameField="ngModel" required/>
+                <div *ngIf="lastNameField.touched && lastNameField.invalid" class="error">
+                    Last Name is required.
+                </div>
+
+                <!-- Email Address -->
+                <input id="email" class="full-width" placeholder="Email Address" type="email" 
+                       [(ngModel)]="email" name="email" #emailField="ngModel" required email/>
+                <div *ngIf="emailField.touched && emailField.invalid" class="error">
+                    <div *ngIf="emailField.errors?.['required']">Email is required.</div>
+                    <div *ngIf="emailField.errors?.['email']">Please enter a valid email address.</div>
+                </div>
+
+                <!-- Phone Number -->
+                <input id="phoneNumber" placeholder="Phone Number" type="number" 
+                       [(ngModel)]="phoneNumber" name="phoneNumber" #phoneNumberField="ngModel" required/>
+                <div *ngIf="phoneNumberField.touched && phoneNumberField.invalid" class="error">
+                   Phone Number is required.
+                </div>
+
+                <!-- Address -->
+                <textarea id="address" placeholder="Address" [(ngModel)]="address" 
+                          name="address" #addressField="ngModel" required></textarea>
+                <div *ngIf="addressField.touched && addressField.invalid" class="error">
+                   Address is required.
+                </div>
+            </div>
+    
+            <button type="submit" class="btn-signup" [disabled]="signupForm.invalid">Sign Up</button>
+        </form>
+    
+        <div class="footer">
+            <a routerLink="/login">Already have an account?</a>
+        </div>
+    </div>
+</body>
+</html>

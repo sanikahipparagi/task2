@@ -1,0 +1,98 @@
+/* Container styling */
+.payment-history-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+h2 {
+  text-align: center;
+  color: #333;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+/* History Description */
+.history-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Table Styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+
+/* Header Row */
+.table th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+/* Table Row */
+.table tr:hover {
+  background-color: #f1f1f1;
+}
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+/* Status Badges */
+span.paid {
+  color: #28a745;
+  font-weight: bold;
+}
+
+span.pending {
+  color: #ffc107;
+  font-weight: bold;
+}
+
+span.failed {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* Responsive Table */
+.table-responsive {
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .payment-history-container {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .table th, .table td {
+    font-size: 14px;
+  }
+}

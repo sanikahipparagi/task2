@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- src/app/components/bills/bills.component.html -->
+<div class="bill-list">
+    <h2>Customer Bills</h2>
+  
+    <!-- Filter Section -->
+    <div class="filter-section">
+      <label for="amountFilter">Filter by Minimum Amount:</label>
+      <!-- <input type="number" id="amountFilter" [(ngModel)]="filterAmount" placeholder="Enter minimum amount"> -->
+      <button >Filter</button>
+      <!-- (click)="filterBills()" -->
+    </div>
+  
+    <!-- Bills Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Bill ID</th>
+          <th>Date</th>
+          <th>Amount</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let bill of bills">
+          <td>{{ bill.id }}</td>
+          <td>{{ bill.date }}</td>
+          <td>{{ bill.amount | currency }}</td>
+          <td>{{ bill.status }}</td>
+          <td>
+            <!-- <a [routerLink]="['/bills', bill.id]">View Details</a>   -->
+            <button (click)="viewBillDetails(bill.id)">View Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Pagination Controls -->
+    <div class="pagination-controls">
+      <!-- <button  [disabled]="page === 0">Previous</button> -->
+      <!-- (click)="prevPage()" -->
+      <!-- <button  [disabled]="page === totalPages - 1">Next</button> -->
+      <!-- (click)="nextPage()" -->
+    </div>
+  </div>
+  
+</body>
+</html>

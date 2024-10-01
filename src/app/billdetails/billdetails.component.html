@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div *ngIf="bill">
+        <h1>Bill Details</h1>
+        <p><strong>Bill ID:</strong> {{ bill.id }}</p>
+        <p><strong>Date:</strong> {{ bill.date }}</p>
+        <p><strong>Amount:</strong> {{ bill.amount | currency }}</p>
+        <p><strong>Status:</strong> {{ bill.status }}</p>
+      
+        <!-- Payment Options (Mocked for this example) -->
+        <!-- <h2>Payment Options</h2>
+        <p>Available payment methods:</p>
+        <ul>
+          <li>Credit/Debit Card</li>
+          <li>Wallet</li>
+        </ul> -->
+
+        <button routerLink="/layout/paymentMethod">Proceed to Payment</button>
+      
+        <!-- <button >Pay Bill</button> -->
+        <!-- (click)="payBill()" -->
+      </div>
+      
+</body>
+</html>

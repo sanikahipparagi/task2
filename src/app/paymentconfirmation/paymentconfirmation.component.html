@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="confirmation-container">
+    <h1>Payment Confirmation</h1>
+  
+    <div class="confirmation-content">
+      <p *ngIf="paymentStatus === 'success'" class="success-message">
+        Payment was successful! <br>
+        <strong>Reference Number:</strong> {{ referenceNumber }}
+      </p>
+  
+      <p *ngIf="paymentStatus === 'failure'" class="failure-message">
+        Payment failed. Please try again or choose a different payment method.
+      </p>
+  
+      <div *ngIf="paymentStatus === ''">
+        <p>Processing your payment, please wait...</p>
+      </div>
+  
+      <div class="confirmation-buttons" *ngIf="paymentStatus !== ''">
+        <button class="history-button" (click)="viewPaymentHistory()">View Payment History</button>
+        <button class="retry-button" *ngIf="paymentStatus === 'failure'" (click)="processPayment()">Retry Payment</button>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

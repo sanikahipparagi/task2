@@ -1,0 +1,96 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: white; /* Text color on cards */
+}
+.logo img{
+    height: 70px;
+    width: 100px;
+    border-radius: 50%;
+}
+.card-title {
+    font-size: 1.25rem;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+/* Header */
+header {
+    background-color: #440365; /* Deep purple background */
+}
+
+header .nav-link {
+    color: white;
+}
+
+header .nav-link:hover {
+    color: #f0c943; /* Light yellow color on hover */
+}
+
+/* Buttons in Hero Section */
+.btn-primary {
+    background-color: #4c0080; /* Deep purple */
+    border-color: #4c0080;
+}
+
+.btn-secondary {
+    background-color: #007bff; /* Blue color */
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #6610f2; /* Slightly lighter purple on hover */
+}
+
+.btn-secondary:hover {
+    background-color: #0056b3; /* Slightly darker blue on hover */
+}
+
+/* Card Section */
+.card-body {
+    padding: 20px;
+}
+
+/* Bills Overview Card */
+.col-md-4:nth-child(1) .card {
+    background-color: #6f42c1; /* Purple */
+}
+
+/* Payment History Card */
+.col-md-4:nth-child(2) .card {
+    background-color: #007bff; /* Blue */
+}
+
+/* Top 5 Bills by Amount Card */
+.col-md-4:nth-child(3) .card {
+    background-color: #ffc107; /* Yellow */
+    color: black; /* Dark text for contrast */
+}
+
+/* List Group Items (for the bills) */
+.list-group-item {
+    background-color: transparent;
+    color: black;
+    border: none;
+}
+
+.list-group-item:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #4c0080; /* Deep purple */
+    color: white;
+}
